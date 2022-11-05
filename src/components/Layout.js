@@ -4,7 +4,7 @@ import * as styles from './layout.module.css'
 
 
 
-const Layout = ({ pageTitle, children }) => {
+const LayoutComp = ({ pageTitle, children }) => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -36,4 +36,4 @@ const {title} = data.site.siteMetadata;
   )
 }
 
-export default Layout
+export default LayoutComp

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import Layoutc from '../components/Layout'
 import Seo from '../components/seo'
 import { useStaticQuery,graphql } from 'gatsby'
 import 'katex/dist/katex.min.css'
@@ -9,10 +9,10 @@ const BlogPage = ({data}) => {
 const html = data.allMarkdownRemark.nodes[0].html
 
   return (
-    <Layout pageTitle="My Blog Posts">
+    <Layoutc pageTitle="My Blog Posts">
     
     <div  dangerouslySetInnerHTML={{ __html: html }} />
-    </Layout>
+    </Layoutc>
   )
 }
 

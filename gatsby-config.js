@@ -14,5 +14,50 @@ module.exports = {
         path: `${__dirname}/blog`,
       }
     },
+    
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-graphviz`, // graphviz before prismjs
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-katex`,
+        ],
+      },
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          },
+        ],
+      },
+    },
   ],
 }

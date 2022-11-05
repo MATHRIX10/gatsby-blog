@@ -22,6 +22,8 @@ const IndexPage = () => {
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="../images/banner.png"
       /> */}
+
+      
       
       </Layout>
    

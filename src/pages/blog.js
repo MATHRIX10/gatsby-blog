@@ -2,36 +2,47 @@ import * as React from 'react'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { useStaticQuery,graphql } from 'gatsby'
+import 'katex/dist/katex.min.css'
 
 const BlogPage = ({data}) => {
-const names = data.allFile.nodes
+
+const html = data.allMarkdownRemark.nodes[0].html
 
   return (
     <Layout pageTitle="My Blog Posts">
-      <ul>
-        {
-            names.map(node=>(
-                <li key = {node.name}>{node.name}</li>
-            ))
-        }
-      </ul>
+    
+    <div  dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
 
 export const Head = () => <Seo title="My Blog Posts" />
+// export const query = graphql`
+// query {
+//     allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+//       nodes {
+//         frontmatter {
+//           date(formatString: "MMMM D, YYYY")
+//           title
+//         }
+//         id
+//         excerpt
+//       }
+//     }
+//   }
+  
+// `
+
 export const query = graphql`
-query {
-    allFile {
+    query {
+    allMarkdownRemark {
       nodes {
-        name
+        html
       }
     }
   }
   
 `
-
-
 export default BlogPage
 
 

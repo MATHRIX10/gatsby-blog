@@ -3,6 +3,21 @@
     max-width: 900px;
     font-family: sans-serif;
   }
+  .navbar{
+    background-color: #111;
+    color: white;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .main{
+    position: relative; 
+    top: 100%;
+    margin-top: 100px;
+  }
 
   .heading {
     color: rebeccapurple;
@@ -11,12 +26,16 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    justify-content: right;
   }
   .nav-link-item {
     padding-right: 2rem;
   }
   .nav-link-text {
-    color: black;
+    color: white;
+  }
+  .nav-link-text:hover {
+    color: aqua;
   }
 
   .site-title {

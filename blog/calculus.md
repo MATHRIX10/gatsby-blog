@@ -12,13 +12,17 @@ tags:
 [gatsby-remark-katex][1] adds math equation support to gatsby using
 [remark-math][2] and [katex][3].
 
+
+
 ## Math Equations in Inline Mode
+
 
 Surround your equation with `$` to generate a math equation in inline mode.
 
 **Example markdown:**
 
 ```
+[Duck Duck Go](https://duckduckgo.com)
 $a^2 + b^2 = c^2$
 ```
 
@@ -29,20 +33,23 @@ $a^2 + b^2 = c^2$
 Surround your equation with `$$` and new-lines to generate a math equation in
 display mode.
 
+
 **Example markdown:**
 
 ```
 $$
+
 a^2 + b^2 = c^2
 $$
 ```
+## this is my headign 
 haha this is a $\int_x f(x) dx $ integral
 **Example output:**
 
 $$
 a^2 + b^2 = c^2
 $$
-
+[Duck Duck Go](https://duckduckgo.com)
 $$
 \begin{aligned}
   \min Q           & = \min_{\beta} \mathbf{Y}'\mathbf{Y} - 2\beta'\mathbf{X}'\mathbf{Y} +
@@ -313,4 +320,5 @@ function de la function
 **Add Katex CSS to your template** Katex's CSS file is required to render the
 formulas correctly. Include the CSS file in your template ([example][4])
 
-
+My favorite search engine is .
+[Duck Duck Go](https://duckduckgo.com)

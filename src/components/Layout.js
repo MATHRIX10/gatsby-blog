@@ -19,15 +19,15 @@ const LayoutComp = ({ pageTitle, children }) => {
 const {title} = data.site.siteMetadata;
   return (
     <div className={styles.container}>
-      <header className={styles.siteTitle}>{title}</header>
-      <nav>
+      
+      <nav className={styles.navbar}>
         <ul className={styles.navLinks}>
           <li className={styles.navLinkItem}><Link to="/" className={styles.navLinkText}>Home</Link></li>
           <li className={styles.navLinkItem}><Link to="/about" className={styles.navLinkText}>About</Link></li>
           <li className={styles.navLinkItem}><Link to="/blog" className={styles.navLinkText}>Blog</Link></li>
         </ul>
       </nav>
-      <main>
+      <main className={styles.main}>
         <h1 className={styles.heading}>{pageTitle}</h1>
         {children}
       </main>
